@@ -21,6 +21,10 @@ Proyek ini adalah implementasi **DataFrame** menggunakan library **Pandas** di P
 ---
 
 ## 🎯 Cara Menjalankan  
-1. Clone repository:  
-```bash
-git clone https://github.com/username/dataframe-project.git
+1. Clone repository:
+```bash'
+# git clone https://github.com/username/dataframe-project.git
+# cd dataFrame-project
+# python -m venv env
+# pip install
+# python main.py
