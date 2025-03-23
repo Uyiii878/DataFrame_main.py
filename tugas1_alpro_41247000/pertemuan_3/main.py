@@ -18,6 +18,15 @@ print(f"Data berhasil disimpan dalam file: {csv_file}")
 # 3. Baca file CSV dan lakukan manipulasi data
 df = pd.read_csv(csv_file)
 
+# Pastikan df adalah DataFrame
+print(type(df))
+
+# Isi nama kolom yang kosong (jika ada) dengan nama default
+df.columns = [f'kolom_{i}' if col is None else col for i, col in enumerate(df.columns)]
+
+# Ubah nama kolom jadi huruf kecil
+df.columns = df.columns.str.lower()
+
 # Manipulasi 1: Tambahkan kolom BMI (Body Mass Index)
 df['bmi'] = df['berat_badan'] / ((df['tinggi_badan'] / 100) ** 2)
 
